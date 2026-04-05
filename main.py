@@ -689,8 +689,8 @@ else:
         return ""
 
     styled_df = (
-        df_port.style.applymap(style_signal, subset=["신호"])
-        .applymap(style_gap, subset=["상대Gap(%)"])
+        df_port.style.map(style_signal, subset=["신호"])
+        .map(style_gap, subset=["상대Gap(%)"])
         .format(
             {
                 "현재가(원)": "{:,}",
