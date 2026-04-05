@@ -392,7 +392,7 @@ with st.sidebar:
         st.session_state.cash_balance = new_cash
         save_data_file()
 
-    new_mdd = st.slider("목표 최대 낙폭 (MDD) %", 5, 50, st.session_state.target_mdd)
+    new_mdd = st.slider("목표 최대 낙폭 (MDD) %", 5, 50, int(st.session_state.target_mdd))
     if new_mdd != st.session_state.target_mdd:
         st.session_state.target_mdd = new_mdd
         save_data_file()
