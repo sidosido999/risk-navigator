@@ -1,0 +1,11 @@
+run = "streamlit run main.py --server.port 3000 --server.address 0.0.0.0 --server.headless true"
+
+[deployment]
+run = ["sh", "-c", "streamlit run main.py --server.port 3000 --server.address 0.0.0.0 --server.headless true"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[agent]
+expertMode = true
